@@ -1,0 +1,62 @@
+hw3:  Implementing 2-3 trees
+============================
+This is due on
+
+
+You are to write a Java class in Tree23.java
+using the structure outlined in the sample Tree23.java.
+
+0) Your primary goal is to replicate our outputs in the file
+				TESTOUTPUT
+	found in this folder.   Note that the method for displaying
+	a Tree23 is called "showTree()" and has been implementd for you.
+
+1) Our sample Tree23.java file contains these classes
+			Item class
+			Node class
+			InternalNode class
+			LeafNode class
+			Tree23 class
+	We have provided many of the needed methods (with
+		input and output specifications).  A FEW OF THEM HAS
+		ALREADY BEEN IMPLEMENTED FOR YOU.
+		All these method are hints for you. 
+		But you are free to ignore them, and are free to write
+		own methods!!
+
+2) An important part of our design is that each InternalNode
+	has a member 
+				Node[] child[4];
+	This Node array is to store the 2 or 3 children in a typical
+	InternalNode.  However, the array has size 4 so that you can
+	temporarily store 4 children.  This is clearly useful.
+	Moreover we use an array so that you can write a for-loop
+	to go through the children.  If the InternalNode has
+	degree d (i.e., has d children), then we assume that the children
+	are represented by the first d entries of the array (and the
+	rest are null).
+
+3) The main method in Tree23.java is geared towards testing
+		various cases, depending on the ``mode'' (given by
+		the command line argument \ttt{mm}).
+		You must not modify the behavior of the first 3 modes,
+		\ttt{mm=0}, \ttt{mm=1}, \ttt{mm=2}.
+		Feel free create your own experimentations
+		for \ttt{mm} larger than 2.
+
+5) We define the Item class such that each "item" is
+	a pair (key,data) pair where key is a String,
+	and data is an int.  For convenience, we
+	have provided two constructors for Item:
+		Item(int x):  	in this case, the key is String.valueOf(x).
+		Item(String s):	in this case, the data is a randomly
+						generated integer.  The actual value
+						of this integer is totally unpredictable
+						(but that is not important for us) 
+
+6) Read JavaNotes file in this folder for some programming hints.
+
+--Chee Yap
+Basic Algorithms
+29 Sep 2021
+

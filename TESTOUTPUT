@@ -1,0 +1,59 @@
+/JavaHome/java.exe -ea -classpath bin Tree23 111 10 0 true abc 
+==> mode 0: unit test
+
+
+======> Inserting Fruits:
+insert(banana) = true
+insert(apple) = true
+insert(peach) = true
+insert(orange) = true
+insert(apple) = false
+insert(pear) = true
+insert(plum) = true
+Here is the final Fruit Tree:
+G=plum:(G=banana:(<apple:6><banana:4>)G=peach:(<orange:8><peach:0>)G=plum:(<pear:8><plum:5>))
+
+======> Inserting sqrt(3) digits:
+insert(1) = true
+insert(7) = true
+insert(3) = true
+insert(2) = true
+insert(0) = true
+insert(5) = true
+insert(0) = false
+insert(8) = true
+insert(0) = false
+Here is the final sqrt(3) Tree:
+G=8:(G=2:(<0:0><1:1><2:2>)G=5:(<3:3><5:5>)G=8:(<7:7><8:8>))
+
+======> Searching Fruits
+Fruit Tree: search(banana) succeeds
+Fruit Tree: search(cherry) fails
+
+======> Searching Digits
+Sqrt3 Tree: search(3) succeeds
+Sqrt3 Tree: search(4) fails
+
+=============== deleting fruits
+DELETE begin: x=banana
+Fruit Tree after DELETE(banana):
+G=plum:(G=peach:(<apple:6><orange:8><peach:0>)G=plum:(<pear:8><plum:5>))
+DELETE begin: x=plum
+Fruit Tree after DELETE(plum):
+G=plum:(G=orange:(<apple:6><orange:8>)G=plum:(<peach:0><pear:8>))
+DELETE begin: x=apricot
+Fruit Tree after DELETE(apricot):
+G=plum:(G=orange:(<apple:6><orange:8>)G=plum:(<peach:0><pear:8>))
+DELETE begin: x=apple
+Fruit Tree after DELETE(apple):
+G=pear:(<orange:8><peach:0><pear:8>)
+
+=============== deleting digits
+DELETE begin: x=3
+Sqrt3 Tree after DELETE(3):
+G=8:(G=1:(<0:0><1:1>)G=5:(<2:2><5:5>)G=8:(<7:7><8:8>))
+DELETE begin: x=0
+Sqrt3 Tree after DELETE(0):
+G=8:(G=5:(<1:1><2:2><5:5>)G=8:(<7:7><8:8>))
+
+=============== THE END
